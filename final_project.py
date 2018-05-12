@@ -88,3 +88,5 @@ ax.set_ylabel('Inflation_Data')
 data = data.dropna()
 ## Stationary Test
 stationary_test(data['Detrend_Data'])
+
+data.to_excel('Data for R.xlsx')
