@@ -14,7 +14,26 @@ import statsmodels.api as sm
 from statsmodels.tsa import seasonal
 from statsmodels.tsa.stattools import adfuller
 import seaborn as sns
-from datetime import datetime
+
+from datetime import datetdef stationary_test(timeseries):
+    # Perform Dickey-Fuller test
+    summary=adfuller(timeseries)
+    print('Results of Augmented Dickey-Fuller Test:')
+    print('Augmented Dickey-Fuller Statistic:%4.f'%summary[0])
+    print('p-value:%f'%summary[1])
+    print('Crititcal Values:')
+    for key,value in summary[4].items():
+        print('\t%s:%.4f' % (key, value))ime
+
+def stationary_test(timeseries):
+    # Perform Dickey-Fuller test
+    summary=adfuller(timeseries)
+    print('Results of Augmented Dickey-Fuller Test:')
+    print('Augmented Dickey-Fuller Statistic:%4.f'%summary[0])
+    print('p-value:%f'%summary[1])
+    print('Crititcal Values:')
+    for key,value in summary[4].items():
+        print('\t%s:%.4f' % (key, value))
 
 def stationary_test(timeseries):
     # Perform Dickey-Fuller test
