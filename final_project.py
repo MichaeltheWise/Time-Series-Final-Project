@@ -35,16 +35,6 @@ def stationary_test(timeseries):
     for key,value in summary[4].items():
         print('\t%s:%.4f' % (key, value))
 
-def stationary_test(timeseries):
-    # Perform Dickey-Fuller test
-    summary=adfuller(timeseries)
-    print('Results of Augmented Dickey-Fuller Test:')
-    print('Augmented Dickey-Fuller Statistic:%4.f'%summary[0])
-    print('p-value:%f'%summary[1])
-    print('Crititcal Values:')
-    for key,value in summary[4].items():
-        print('\t%s:%.4f' % (key, value))
-
 ## Detrend with time
 data = pd.read_excel("inflation.xlsx")
 data.columns = ['Inflation_Data']
